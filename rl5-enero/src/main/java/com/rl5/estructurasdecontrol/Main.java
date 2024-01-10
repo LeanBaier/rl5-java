@@ -77,6 +77,49 @@ public class Main {
             false || true -> true
         */
 
+        //IF
+
+
+
+        /*
+            == -> Igual a
+            != -> Distinto a
+            < -> Menor
+            <= -> Menor o igual
+            > -> Mayor
+            >= -> Mayor o igual
+         */
+
+
+        //IF - IF ELSE
+        /*int numero = 10;
+        if (numero <= 5 ){
+            System.out.println("El numero es menor o igual a 5");
+        } else if (numero < 10){
+            System.out.println("Es mayor a 5 y menor a 10");
+        } else {
+            System.out.println("Es mayor o igual 10");
+        }*/
+
+
+        //Switch
+        /*
+            Opciones:
+            1 - abrir archivo
+            2 - borrar archivo
+            3 - salir
+         */
+        int opcion = 2;
+        switch (opcion){
+            case 1:
+                System.out.println("Abriendo archivo.");
+            case 2:
+                System.out.println("Borrando archivo.");
+            case 3:
+                System.out.println("Saliendo");
+            default:
+                System.out.println("Esta opcion no existe");
+        }
     }
 
 }
