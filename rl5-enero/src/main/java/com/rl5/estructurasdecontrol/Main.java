@@ -113,10 +113,13 @@ public class Main {
         switch (opcion){
             case 1:
                 System.out.println("Abriendo archivo.");
+                break;
             case 2:
                 System.out.println("Borrando archivo.");
+                break;
             case 3:
                 System.out.println("Saliendo");
+                break;
             default:
                 System.out.println("Esta opcion no existe");
         }
