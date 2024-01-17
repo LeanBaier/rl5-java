@@ -26,14 +26,19 @@ public class Main {
         animal.setNombre("Perro");
         animal.comer();*/
 
-        SerVivo serV = new Animal();
+        Alimentable animal = new Animal();
+        Alimentable persona = new Persona();
+        Alimentable perro = new Perro("Doberman");
+        alimentarSer(animal);
+        alimentarSer(persona);
+        alimentarSer(perro);
 
-        serV.comer();
-
-        serV = new Persona();
-
-        serV.comer();
 
 
+
+    }
+
+    private static void alimentarSer(Alimentable alimentable){
+        alimentable.alimentar();
     }
 }

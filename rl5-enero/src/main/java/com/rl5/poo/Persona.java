@@ -3,7 +3,7 @@ package com.rl5.poo;
 import java.util.Date;
 import java.util.Objects;
 
-public class Persona extends SerVivo {
+public class Persona extends SerVivo implements Alimentable{
 
     private Date fechaNacimiento;
     private String apellido;
@@ -33,7 +33,7 @@ public class Persona extends SerVivo {
     }
 
     @Override
-    public void comer() {
-        System.out.println("La persona esta comiendo.");
+    public void alimentar() {
+        System.out.println("La persona se esta alimentando");
     }
 }

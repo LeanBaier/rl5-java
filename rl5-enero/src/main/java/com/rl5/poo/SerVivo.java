@@ -1,6 +1,6 @@
 package com.rl5.poo;
 
-public class SerVivo {
+public abstract class SerVivo implements Alimentable{
 
     private String nombre;
 

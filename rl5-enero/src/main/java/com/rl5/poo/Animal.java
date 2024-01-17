@@ -7,4 +7,9 @@ public class Animal extends SerVivo{
         super.getNombre();
         System.out.println("El animal esta comiendo.");
     }
+
+    @Override
+    public void alimentar() {
+        System.out.println("El animal se esta alimentando.");
+    }
 }
