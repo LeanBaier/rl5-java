@@ -2,9 +2,9 @@ package com.rl5.ejercicios.empresa.empleado;
 
 public abstract class Empleado {
 
-    private String nombre;
-    private String apellido;
-    private Long legajo;
+    private final String nombre;
+    private final String apellido;
+    private final Long legajo;
 
     public Empleado(String nombre, String apellido, Long legajo) {
         this.nombre = nombre;

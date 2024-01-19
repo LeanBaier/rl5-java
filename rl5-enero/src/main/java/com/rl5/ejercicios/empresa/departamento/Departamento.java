@@ -8,7 +8,8 @@ import java.util.List;
 public abstract class Departamento {
 
     private static Long idGenerator = 0L;
-
+    private final String nombreDepartamento;
+    private boolean tuvoEmpleados = false;
     private Long idDepartamento;
 
     private List<Empleado> empleados;
@@ -16,10 +17,17 @@ public abstract class Departamento {
     public Departamento() {
         this.idDepartamento = ++idGenerator;
         this.empleados = new ArrayList<>();
+        this.nombreDepartamento = this.getClass().getSimpleName() + " " + this.idDepartamento;
     }
 
-    public void agregarEmpleado(Empleado empleado) {
+    public boolean isTuvoEmpleados() {
+        return tuvoEmpleados;
+    }
+
+    public boolean agregarEmpleado(Empleado empleado){
         this.empleados.add(empleado);
+        this.tuvoEmpleados = true;
+        return true;
     }
 
     public void eliminarEmpleado(Empleado empleado) {
@@ -28,5 +36,21 @@ public abstract class Departamento {
 
     public Long getIdDepartamento() {
         return idDepartamento;
+    }
+
+    public List<Empleado> getEmpleados() {
+        return this.empleados;
+    }
+    public Empleado buscarEmpleado(Long legajo) {
+        for (var empleado : empleados) {
+            if (empleado.getLegajo().equals(legajo)) {
+                return empleado;
+            }
+        }
+        return null;
+    }
+
+    public String getNombreDepartamento() {
+        return nombreDepartamento;
     }
 }

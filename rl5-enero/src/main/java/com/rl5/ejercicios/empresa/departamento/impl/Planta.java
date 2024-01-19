@@ -11,9 +11,12 @@ public class Planta extends Departamento {
     }
 
     @Override
-    public void agregarEmpleado(Empleado empleado) {
+    public boolean agregarEmpleado(Empleado empleado) {
         if (empleado instanceof Operador){
-            super.agregarEmpleado(empleado);
+            return super.agregarEmpleado(empleado);
+        }else {
+            System.out.println("El empleado de tipo [" + empleado.getClass().getSimpleName() + "] no se puede asignar a la planta.");
+            return false;
         }
     }
 
